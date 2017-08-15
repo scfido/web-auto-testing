@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Index",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console":"internalConsole"
+        },
+        {
+            "request": "launch",
+            "name": "Mocha",
+            "type": "node",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "args": [
+                "${workspaceRoot}/test/.setup.js",
+                "${workspaceRoot}/test/**/*.test.js",
+                "-u",
+                "tdd",
+                "--timeout",
+                "1000",
+                "--colors"
+            ],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": {
+                //"Path": "${env:Path};${workspaceRoot}\\driver",
+                "NODE_ENV": "production"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

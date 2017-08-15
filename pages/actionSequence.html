@@ -1,0 +1,14 @@
+<html>
+<title>鼠标点击测试</title>
+
+<body style="padding:0; margin:0">
+    <div id="main" style="background:green; height:100%;" onclick=changeColor()>Test</div>
+    <script>
+        function changeColor() {
+            var main = window.document.getElementById("main");
+            main.style.setProperty("background", "red")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "webapi-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test/.setup.js test/*.test.js --reporter mochawesome --reporter-options autoOpen=true,quiet=true"
+  },
+  "keywords": [
+    "testing",
+    "Mocha"
+  ],
+  "author": "Xie Jian",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "chai": "^3.5.0",
+    "encodeurl": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^3.4.1",
+    "mocha-clean": "^1.0.0",
+    "mochawesome": "^2.2.0",
+    "selenium-webdriver": "^3.4.0"
+  }
+}
